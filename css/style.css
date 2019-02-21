@@ -1,0 +1,132 @@
+
+.item img{
+
+	width: 100%;
+	height: 500px !important;
+	opacity: 0.7;
+}
+.carousel-caption{
+
+	margin-bottom: 120px !important;
+	color: black;
+
+}
+.button {
+	border-radius: 4px;
+	background-color: #0fb8ce;
+	border: none;
+	color: black;
+	text-align: center;
+	font-size: 14px;
+	padding: 10px;
+	width: 100px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button:hover span {
+	padding-right: 25px;
+}
+
+.button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+.thumbnail img{
+
+	width: 100%;
+	height: 300px !important;
+}
+.thumbnail figure {
+	background: #fff;
+	overflow: hidden;
+}
+.thumbnail figure:hover+span {
+	bottom: -36px;
+	opacity: 0.5;
+}
+.hover03 figure img {
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover03 figure:hover img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.hover15 figure {
+	position: relative;
+}
+.hover15 figure::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 0;
+	height: 0;
+	background: rgba(255,255,255,.2);
+	border-radius: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+.hover15 figure:hover::before {
+	-webkit-animation: circle .75s;
+	animation: circle .75s;
+}
+@-webkit-keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+.hover10 figure img {
+	-webkit-filter: grayscale(0) blur(0);
+	filter: grayscale(0) blur(0);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover10 figure:hover img {
+	-webkit-filter: grayscale(100%) blur(3px);
+	filter: grayscale(100%) blur(3px);
+}
